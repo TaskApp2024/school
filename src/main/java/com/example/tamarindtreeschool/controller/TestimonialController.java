@@ -18,7 +18,8 @@ import org.springframework.web.multipart.MultipartFile;
 @CrossOrigin(origins = "https://schooltamarindtree.netlify.app/") 
 public class TestimonialController {
 
-    private static final String UPLOAD_DIR = "uploads/";
+    private static final String UPLOAD_DIR = "/app/uploads"; // Render-safe
+
 
     @Autowired
     private TestimonialService testimonialService;
