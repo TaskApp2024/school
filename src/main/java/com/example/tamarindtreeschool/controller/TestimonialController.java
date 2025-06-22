@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/testimonials")
-@CrossOrigin(origins = "http://localhost:3000") 
+@CrossOrigin(origins = "https://schooltamarindtree.netlify.app/") 
 public class TestimonialController {
 
     private static final String UPLOAD_DIR = "uploads/";
