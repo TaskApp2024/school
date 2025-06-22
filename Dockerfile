@@ -1,10 +1,10 @@
-# Build stage
-FROM maven:3.8.6-openjdk-17 AS build
+# ----- Build Stage -----
+FROM maven:3.9.4-eclipse-temurin-17 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean install
 
-# Run stage
+# ----- Run Stage -----
 FROM eclipse-temurin:17
 WORKDIR /app
 COPY --from=build /app/target/tamarindtreeschool-0.0.1-SNAPSHOT.jar app.jar
